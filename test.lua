@@ -435,7 +435,7 @@ function Library:create(options)
 		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global
 	})
-gui.Enabled = true
+gui.Enabled = false
 
 
 if gethui then
