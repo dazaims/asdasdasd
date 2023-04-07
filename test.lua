@@ -445,9 +445,6 @@ function Library:create(options)
 
 
 
-	if options.Link:sub(-1, -1) == "/" then
-		options.Link = options.Link:sub(1, -2)
-	end
 
 	if options.Theme.Light then
 		self.darken, self.lighten = self.lighten, self.darken
