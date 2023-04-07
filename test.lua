@@ -894,7 +894,7 @@ function Library:create(options)
 	})
 
 	rawset(mt, "creditsContainer", creditsTab.container)
-		creditsTab:credit{Name = "Dazaims", Description = "Developer", Discord = "ddaaim#9662",V3rmillion = "AbstractPoo"}
+		creditsTab:credit{Name = "Dazaims", Description = "Developer", Discord = "ddaaim#9662",V3rmillion = "n/a"}
 
 	return mt
 end
@@ -1178,7 +1178,7 @@ function Library:tab(options)
 	})
 
 	local tabButtonIcon = tabButton:object("ImageLabel", {
-		AnchorPoint = Vector2.new(100, 100),
+		AnchorPoint = Vector2.new(0, 0.5),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
@@ -2829,7 +2829,7 @@ function Library:credit(options)
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -40, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("copy v3rm")
+			}):round(5):tooltip("n/a")
 			local v3rmillion = v3rmillionContainer:object("ImageLabel", {
 				Image = "http://www.roblox.com/asset/?id=8594086769",
 				Size = UDim2.new(1, -4, 1, -4),
