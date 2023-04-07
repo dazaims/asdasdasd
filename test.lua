@@ -1178,7 +1178,7 @@ function Library:tab(options)
 	})
 
 	local tabButtonIcon = tabButton:object("ImageLabel", {
-		AnchorPoint = Vector2.new(0, 0.5),
+		AnchorPoint = Vector2.new(255, 255),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
