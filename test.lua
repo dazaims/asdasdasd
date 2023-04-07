@@ -435,34 +435,7 @@ function Library:create(options)
 		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global
 	})
-gui.Enabled = false
 
-
-if gethui then
-	gui.Parent = gethui()
-elseif syn.protect_gui then 
-	syn.protect_gui(gui)
-	gui.Parent = CoreGui
-elseif gui:FindFirstChild("RobloxGui") then
-	gui.Parent = CoreGui:FindFirstChild("RobloxGui")
-else
-	gui.Parent = CoreGui
-end
-if gethui then
-	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == gui.Name and Interface ~= gui then
-			Interface.Enabled = false
-			Interface.Name = "gui-Old"
-		end
-	end
-else
-	for _, Interface in ipairs(CoreGui:GetChildren()) do
-		if Interface.Name == gui.Name and Interface ~= gui then
-			Interface.Enabled = false
-			Interface.Name = "gui-Old"
-		end
-	end
-end
 	local notificationHolder = gui:object("Frame", {
 		AnchorPoint = Vector2.new(1, 1),
 		BackgroundTransparency = 1,
